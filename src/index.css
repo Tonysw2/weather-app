@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    background-color: #353535;
+}
+
+#root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100vh;
+    width: 100vw;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    gap: 54px;
+
+    width: 40rem;
+    /* border: 1px solid #fff; */
+    border-radius: 11px;
+    box-shadow: 0 0 20px rgba(59, 59, 59, 0.1);
+    min-height: 60rem;
+
+    background-image: linear-gradient(
+            to right bottom,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.7)
+        ),
+        url('./imgs/cold-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    /* background-color: #1a1a1a; */
+}
+
+.App.warm {
+    background-image: linear-gradient(
+            to right bottom,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.7)
+        ),
+        url('./imgs/warm-bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.App .undefined-local {
+    font-size: 36px;
+    text-align: center;
+    transition: all 0.4;
+}
+
+.App .search-bar {
+    margin-top: 4.2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.App .search-bar form {
+    width: 70%;
+}
+
+.App .search-bar input {
+    border: 0 solid;
+    border-radius: 100px;
+    transition: all 0.5s;
+    box-shadow: 0 0 7px rgba(17, 17, 17, 0.2);
+
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 0.8rem 1.2rem;
+    font-size: 18px;
+    width: 100%;
+}
+
+.App .search-bar input:focus {
+    border: none;
+    box-shadow: 0 5px 5px rgba(17, 17, 17, 0.3);
+    outline: none;
+}
+
+.App .search-bar input:hover {
+    outline: none;
+}
+
+.App .weather-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.App .information {
+    margin-top: 3.6rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.App .information .local {
+    font-size: 28px;
+}
+
+.App .information .date {
+    font-size: 12px;
+    font-style: oblique;
+}
+
+.App .weather-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.App .weather-box .temp-container {
+    width: fit-content;
+    padding: 2.4rem 3.2rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 9px;
+    box-shadow: 4px 6px 0 rgba(0, 0, 0, 0.274);
+}
+
+.App .weather-box .temp {
+    font-size: 54px;
+    font-weight: 700;
+}
+
+.App .weather {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+}
